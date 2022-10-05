@@ -20,7 +20,8 @@ class pluginAllInOneSeo extends Plugin {
 			'twitterCreator'     => '',
 			'twitterWidgetColor' => 'light',
 			'twitterWidgetCsp'   => 'on',
-			'twitterWidgetDnt'   => 'on'
+			'twitterWidgetDnt'   => 'on',
+			'googleVerification' => '',
 		);
 	}
 
@@ -159,6 +160,10 @@ class pluginAllInOneSeo extends Plugin {
 			$html .= '<meta name="twitter:dnt" content="off">' . PHP_EOL;
 		}
 
+		if( !empty( $this->getValue('googleVerification') ) )
+		{
+			$html .= '<meta name="google-site-verification" content="' . $this->getValue('googleVerification') .'">' . PHP_EOL;
+		}
 
 		$html .= '<!-- /Plugin Ultimate SEO -->' . PHP_EOL . PHP_EOL;
 		return $html;
@@ -283,6 +288,13 @@ class pluginAllInOneSeo extends Plugin {
         $html .= '<option value="off" ' . ($this->getValue('twitterWidgetDnt') === 'off' ? 'selected' : '') . '>' . $L->get('Disable') . '</option>';
         $html .= '</select>';
         $html .= '<small class="form-text text-muted" id="twitterWidgetDnt">' . $L->get('You may choose whether Twitter widgets on your site help to personalize content and suggestions for Twitter users, including ads.') . '</small>';
+        $html .= '</div>';
+
+		$html .= '<h4 class="border-bottom border-info text-info">' . $L->get('Google') . '</h4>';
+        $html .= '<div class="mb-5">';
+        $html .= '<label class="form-label" for="googleVerification">'.$L->get('Google Search console').'</label>';
+        $html .= '<input class="form-control" id="googleVerification" name="googleVerification" type="text" aria-describedby="googleVerification" value="'.$this->getValue('googleVerification').'" placeholder="">';
+        $html .= '<small class="form-text text-muted" id="googleVerification">' . $L->get('Ownership verification means proving to Search Console that you own a specific website. Site owners in Search Console have access to sensitive Google Search data for a site, and can affect a site\'s presence and behavior on Google Search and other Google services.') . ' <a href="https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification" title="' . $L->get('(More info)') . '">' . $L->get('(More info)') . '</a></small>';
         $html .= '</div>';
 
         $html .= '<p class="clearfix py-4"> </p>';
