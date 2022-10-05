@@ -7,15 +7,21 @@ All in One SEO **plugin** for [Bludit CMS](https://www.bludit.com/)
 This plugin allows you to set:
 
  - Canonical meta tag
- - Robots meta tag
+ - Default robots meta tag
  - Open Graph meta tags
- - Default image for sharing
+ - Default cover image for posts sharing
  - Facebook App ID
  - Twitter site profile
  - Twitter author profile
  - Twitter widgets color
  - Twitter Content security policy settings
  - Twitter Do not track settings
+ - Site verification code for Google Search Console
+
+### Installation
+ - Download and unzip
+ - Upload the plugin to the `bl-plugins` folder
+ - Activate it in the administration and set the necessary items.
 
 ### Support
 **All in One SEO** plugin is open source and free. Donate for the coffee:
