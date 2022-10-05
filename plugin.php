@@ -39,7 +39,22 @@ class pluginAllInOneSeo extends Plugin {
 		// Meta tag Robots
 		if( $this->getValue('enableRobots') )
 		{
-			$html .= '<meta name="robots" content="index, follow, archive">'.PHP_EOL;
+			if ( $WHERE_AM_I == 'page' )
+			{
+				$robots = array();
+				if ( $page->noindex() ){ $robots['noindex'] = 'noindex'; }else{ $robots['noindex'] = 'index'; }
+				if ( $page->nofollow() ){ $robots['nofollow'] = 'nofollow'; }else{ $robots['nofollow'] = 'follow'; }
+				if ( $page->noarchive() ){ $robots['noarchive'] = 'noarchive'; }else{ $robots['noarchive'] = 'archive'; }
+				if ( !empty($robots) ) {
+					$robots = implode(',', $robots);
+				}
+				$html .= '<meta name="robots" content="' . $robots . '">'.PHP_EOL;
+			}elseif( $WHERE_AM_I == 'home' ){
+				$html .= '<meta name="robots" content="index, follow, archive">'.PHP_EOL;
+			}else{
+				// category, tags
+				$html .= '<meta name="robots" content="noindex, follow, noarchive">'.PHP_EOL;
+			}
 		}else{
 			$html .= '<meta name="robots" content="noindex, nofollow, noarchive">'.PHP_EOL;
 		}

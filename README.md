@@ -7,7 +7,8 @@ All in One SEO **plugin** for [Bludit CMS](https://www.bludit.com/)
 This plugin allows you to set:
 
  - Canonical meta tag
- - Default robots meta tag
+ - Meta tags robots on homepage, category page and tags page
+ - Meta tags on page
  - Open Graph meta tags
  - Default cover image for posts sharing
  - Facebook App ID
