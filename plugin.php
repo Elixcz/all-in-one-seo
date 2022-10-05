@@ -4,7 +4,7 @@
  * @author Elix
  * @url https://elix.mzf.cz
  * @email elix.code@gmail.com
- * @version 1.0.0
+ * @version 1.1.0
  */
 class pluginAllInOneSeo extends Plugin {
 
