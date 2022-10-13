@@ -1,10 +1,7 @@
-# All in One SEO plugin
-
-All in One SEO **plugin** for [Bludit CMS](https://www.bludit.com/)
+# Plugin All in One SEO for Bludit CMS
+Everything needed for SEO optimization in a single plugin.
 
 ## Plugin Features
-
-This plugin allows you to set:
 
  - Canonical meta tag
  - Meta tags robots on homepage, category page and tags page
@@ -19,15 +16,15 @@ This plugin allows you to set:
  - Twitter Do not track settings
  - Site verification code for Google Search Console
 
-### Installation
+## Installation
  - Download and unzip
  - Upload the plugin to the `bl-plugins` folder
- - Activate it in the administration and set the necessary items.
+ - Activate it in the administration
 
-### Support
+## Support
 **All in One SEO** plugin is open source and free. Donate for the coffee:
 
-[BTC](bitcoin:bc1q9pe4at2zk9jrrx6sxw9d9ckqjgsj644eelzl03?message=all-in-one-seo): `bc1q9pe4at2zk9jrrx6sxw9d9ckqjgsj644eelzl03`
+[BTC](bitcoin:bc1q03v5la7uvcwxr7z4qn03ex6n5edju6zv4n6ppt?message=all-in-one-seo): `bc1q03v5la7uvcwxr7z4qn03ex6n5edju6zv4n6ppt`
 
-### License
+## License
 **All in One SEO** plugin is open source software licensed under the [MIT license](https://tldrlegal.com/license/mit-license).
