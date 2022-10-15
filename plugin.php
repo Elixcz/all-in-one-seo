@@ -1,10 +1,12 @@
 <?php
 /** All in One SEO
+ *  -----------------------------------------------
+ *  Everything needed for SEO optimization in a single plugin.
  *
  * @author Elix
- * @url https://elix.mzf.cz
+ * @url https://elix.mzf.cz/rubrika/bludit-cms
  * @email elix.code@gmail.com
- * @version 1.1.0
+ * @version 1.1.1
  */
 class pluginAllInOneSeo extends Plugin {
 
@@ -34,7 +36,7 @@ class pluginAllInOneSeo extends Plugin {
 		global $content;
 
 		// First line in HTML
-		$html = '<!-- Plugin Ultimate SEO -->' . PHP_EOL;
+		$html = '<!-- Plugin All in One SEO -->' . PHP_EOL;
 
 		// Meta tag Robots
 		if( $this->getValue('enableRobots') )
@@ -136,7 +138,11 @@ class pluginAllInOneSeo extends Plugin {
 					$og['image'] = $src;
 				}
 			}
-			$og['description'] = $this->content_excerpt( $og['description'] , 150, '...');
+
+			// if not set page description adding page excerpt
+			if( empty( $og['description'] ) ):
+				$og['description'] = $this->content_excerpt( $og['description'] , 150, '...');
+			endif;
 
 			$html .= '<meta property="og:locale" content="' . $og['locale'] . '">'.PHP_EOL;
 			$html .= '<meta property="og:type" content="' . $og['type'] . '">'.PHP_EOL;
@@ -180,7 +186,7 @@ class pluginAllInOneSeo extends Plugin {
 			$html .= '<meta name="google-site-verification" content="' . $this->getValue('googleVerification') .'">' . PHP_EOL;
 		}
 
-		$html .= '<!-- /Plugin Ultimate SEO -->' . PHP_EOL . PHP_EOL;
+		$html .= '<!-- /Plugin All in One SEO -->' . PHP_EOL . PHP_EOL;
 		return $html;
 	}
 
@@ -350,4 +356,4 @@ class pluginAllInOneSeo extends Plugin {
 	    return ( mb_strlen( $out ) === mb_strlen( $str ) ) ? $out : $out . $endChar;
 	}
 
-}
+}// End Class

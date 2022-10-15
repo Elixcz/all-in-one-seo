@@ -25,6 +25,7 @@ Everything needed for SEO optimization in a single plugin.
 **All in One SEO** plugin is open source and free. Donate for the coffee:
 
 [BTC](bitcoin:bc1q03v5la7uvcwxr7z4qn03ex6n5edju6zv4n6ppt?message=all-in-one-seo): `bc1q03v5la7uvcwxr7z4qn03ex6n5edju6zv4n6ppt`
+For more information about this plugin or other templates or plugins from the author, please visit [this page](https://elix.mzf.cz/rubrika/bludit-cms).
 
 ## License
 **All in One SEO** plugin is open source software licensed under the [MIT license](https://tldrlegal.com/license/mit-license).
